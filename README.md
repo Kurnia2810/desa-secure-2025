@@ -64,13 +64,39 @@ Proyek ini dikembangkan sebagai bagian dari inisiatif akademik untuk mata kuliah
 - pip (Python package manager)
 - Koneksi internet untuk instalasi package
 
-### Langkah 1: Clone Repository
+### Opsi 1: Penggunaan Langsung (Tanpa Clone)
+
+Jika Anda sudah memiliki file proyek ini di komputer Anda:
+
 ```bash
-git clone https://github.com/yourusername/desa-secure-2025.git
-cd desa-secure-2025
+# Buka folder proyek
+cd "path/to/desa-secure-2025"
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Jalankan aplikasi
+streamlit run app.py
 ```
 
-### Langkah 2: Buat Virtual Environment (Direkomendasikan)
+### Opsi 2: Clone dari GitHub
+
+Jika repository sudah tersedia di GitHub:
+
+```bash
+# Clone repository (ganti YOUR_USERNAME dengan username GitHub Anda)
+git clone https://github.com/YOUR_USERNAME/desa-secure-2025.git
+cd desa-secure-2025
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Jalankan aplikasi
+streamlit run app.py
+```
+
+### Virtual Environment (Opsional tapi Direkomendasikan)
+
 ```bash
 # Windows
 python -m venv venv
@@ -79,16 +105,9 @@ venv\Scripts\activate
 # Linux/Mac
 python3 -m venv venv
 source venv/bin/activate
-```
 
-### Langkah 3: Install Dependencies
-```bash
+# Kemudian install dependencies
 pip install -r requirements.txt
-```
-
-### Langkah 4: Jalankan Aplikasi
-```bash
-streamlit run app.py
 ```
 
 Aplikasi akan otomatis terbuka di browser default Anda pada `http://localhost:8501`
@@ -314,9 +333,9 @@ SOFTWARE.
 
 Untuk pertanyaan, dukungan, atau peluang kolaborasi:
 
-- **GitHub Issues**: [Laporkan bug atau minta fitur](https://github.com/yourusername/desa-secure-2025/issues)
-- **Email**: your.email@example.com
+- **GitHub**: Buat repository dan update URL di sini
 - **Proyek**: Fokus pada Ekosistem Digital Desa Indonesia
+- **Semester**: 5 - Audit Teknologi & Sistem Informasi
 
 ---
 
@@ -405,3 +424,5 @@ Tool ini sempurna untuk:
 ⭐ Beri bintang repo ini jika Anda merasa berguna!
 
 </div>
+#   d e s a - s e c u r e - 2 0 2 5  
+ 
