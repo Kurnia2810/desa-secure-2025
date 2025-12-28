@@ -1,0 +1,27 @@
+# Desa-Secure 2025 - OSINT Vendor Risk Dashboard
+# Requirements file for Python dependencies
+
+# Core Framework
+streamlit>=1.28.0
+
+# Data Manipulation and Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data Visualization
+plotly>=5.17.0
+
+# Network and Security Tools
+python-whois>=0.8.0
+requests>=2.31.0
+
+# Standard Library (included with Python, listed for reference)
+# socket - Built-in
+# ssl - Built-in
+# datetime - Built-in
+# urllib - Built-in
+# re - Built-in
+
+# Optional: For enhanced functionality
+dnspython>=2.4.0  # Enhanced DNS resolution
+cryptography>=41.0.0  # Additional SSL/TLS utilities
