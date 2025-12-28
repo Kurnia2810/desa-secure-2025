@@ -11,11 +11,19 @@
 
 ## 📖 Gambaran Umum
 
-**Desa-Secure 2025** adalah alat audit OSINT (Open-Source Intelligence) komprehensif yang dirancang khusus untuk menilai risiko keamanan vendor Sistem Informasi Desa (SID) di Indonesia. Tool ini berfokus pada domain yang berakhiran `.desa.id` dan menyediakan analisis keamanan mendalam termasuk informasi domain, sertifikat SSL/TLS, pemindaian port, dan evaluasi header keamanan.
+**Desa-Secure 2025** adalah alat audit OSINT (Open-Source Intelligence) komprehensif yang dirancang khusus untuk menilai risiko keamanan vendor Sistem Informasi Desa (SID) di Indonesia. 
+
+Tool ini berfokus pada domain yang berakhiran `.desa.id` dan menyediakan analisis keamanan mendalam termasuk:
+- Informasi domain
+- Sertifikat SSL/TLS
+- Pemindaian port
+- Evaluasi header keamanan
 
 ### 🎯 Tujuan Proyek
 
-Proyek ini dikembangkan sebagai bagian dari inisiatif akademik untuk mata kuliah **Audit Teknologi & Sistem Informasi**, Semester 5, 2025. Tujuannya adalah menyediakan administrator desa dan auditor IT dengan alat yang sederhana namun powerful untuk menilai postur keamanan vendor infrastruktur digital mereka.
+Proyek ini dikembangkan sebagai bagian dari inisiatif akademik untuk mata kuliah **Audit Teknologi & Sistem Informasi**, Semester 5, 2025. 
+
+Tujuannya adalah menyediakan administrator desa dan auditor IT dengan alat yang sederhana namun powerful untuk menilai postur keamanan vendor infrastruktur digital mereka.
 
 ---
 
@@ -424,5 +432,6 @@ Tool ini sempurna untuk:
 ⭐ Beri bintang repo ini jika Anda merasa berguna!
 
 </div>
-#   d e s a - s e c u r e - 2 0 2 5  
+#   d e s a - s e c u r e - 2 0 2 5 
+ 
  
