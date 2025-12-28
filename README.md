@@ -11,99 +11,85 @@
 
 ## 📖 Gambaran Umum
 
-**Desa-Secure 2025** adalah alat audit OSINT (Open-Source Intelligence) komprehensif yang dirancang khusus untuk menilai risiko keamanan vendor Sistem Informasi Desa (SID) di Indonesia. 
+**Desa-Secure 2025** adalah alat audit OSINT (Open-Source Intelligence) yang dirancang untuk menilai risiko keamanan vendor Sistem Informasi Desa (SID) di Indonesia. 
 
-Tool ini berfokus pada domain yang berakhiran `.desa.id` dan menyediakan analisis keamanan mendalam termasuk:
+Tool ini fokus pada domain `.desa.id` dengan analisis:
 - Informasi domain
-- Sertifikat SSL/TLS
+- Sertifikat SSL/TLS  
 - Pemindaian port
-- Evaluasi header keamanan
+- Header keamanan
 
 ### 🎯 Tujuan Proyek
 
-Proyek ini dikembangkan sebagai bagian dari inisiatif akademik untuk mata kuliah **Audit Teknologi & Sistem Informasi**, Semester 5, 2025. 
+Proyek akademik untuk mata kuliah **Audit Teknologi & Sistem Informasi**, Semester 5, 2025.
 
-Tujuannya adalah menyediakan administrator desa dan auditor IT dengan alat yang sederhana namun powerful untuk menilai postur keamanan vendor infrastruktur digital mereka.
+Menyediakan alat sederhana untuk administrator desa dan auditor IT dalam menilai postur keamanan vendor infrastruktur digital mereka.
 
 ---
 
 ## ✨ Fitur Utama
 
 ### 🌐 Modul Audit Domain
-- **Pencarian WHOIS**: Mengambil informasi registrar, tanggal pembuatan, dan tanggal kadaluarsa
-- **Resolusi DNS**: Mengonversi nama domain menjadi alamat IP
-- **Informasi Name Server**: Menampilkan name server otoritatif
+- Pencarian WHOIS (Registrar, tanggal pembuatan, kadaluarsa)
+- Resolusi DNS ke alamat IP
+- Informasi Name Server
 
 ### 🔐 Modul Audit Keamanan
-- **Validasi Sertifikat SSL/TLS**: Memeriksa validitas sertifikat, tanggal kadaluarsa, dan penerbit
-- **Pemindai Port**: Pemindaian pasif port umum (HTTP, HTTPS, SSH, FTP, MySQL, PostgreSQL)
-- **Analisis Header Keamanan**: Memeriksa header keamanan kritis seperti X-Frame-Options, CSP, HSTS, dll.
+- Validasi Sertifikat SSL/TLS
+- Pemindai Port (HTTP, HTTPS, SSH, FTP, MySQL, PostgreSQL)
+- Analisis Header Keamanan (X-Frame-Options, CSP, HSTS, dll)
 
 ### 📊 Penilaian Risiko
-- **Skor Risiko Cerdas**: Kalkulasi otomatis berdasarkan berbagai faktor keamanan
-- **Sistem Nilai**: Skala penilaian A hingga F untuk pemahaman mudah
-- **Klasifikasi Tingkat Risiko**: Kategori risiko Rendah, Sedang, Menengah, Tinggi, dan Kritis
-- **Temuan Terperinci**: Rekomendasi keamanan yang jelas dan actionable
+- Skor Risiko Otomatis
+- Sistem Nilai A sampai F
+- Klasifikasi: Rendah, Sedang, Menengah, Tinggi, Kritis
+- Rekomendasi keamanan actionable
 
 ### 📈 Visualisasi
-- **Grafik Gauge Interaktif**: Representasi visual skor risiko menggunakan Plotly
-- **Dashboard Metrik**: Tampilan real-time indikator keamanan kunci
-- **Tabel Ringkasan**: Hasil audit komprehensif dalam format tabel
-- **Opsi Ekspor**: Unduh laporan dalam format CSV dan TXT
+- Grafik Gauge Interaktif (Plotly)
+- Dashboard Metrik Real-time
+- Tabel Ringkasan
+- Ekspor CSV dan TXT
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Teknologi
 
-- **Python 3.8+**: Bahasa pemrograman inti
-- **Streamlit**: Framework dashboard web interaktif
-- **Pandas**: Manipulasi dan analisis data
-- **Plotly**: Visualisasi data interaktif
-- **Python-Whois**: Pengambilan data WHOIS
-- **Requests**: HTTP request untuk analisis header
-- **Socket & SSL**: Modul Python native untuk operasi jaringan
+- **Python 3.8+** - Bahasa pemrograman
+- **Streamlit** - Framework dashboard
+- **Pandas** - Analisis data
+- **Plotly** - Visualisasi interaktif
+- **Python-Whois** - Data WHOIS
+- **Requests** - HTTP requests
+- **Socket & SSL** - Operasi jaringan
 
 ---
 
-## 🚀 Instalasi & Pengaturan
+## 🚀 Instalasi
 
 ### Prasyarat
-- Python 3.8 atau lebih tinggi
-- pip (Python package manager)
-- Koneksi internet untuk instalasi package
+- Python 3.8+
+- pip
+- Koneksi internet
 
-### Opsi 1: Penggunaan Langsung (Tanpa Clone)
-
-Jika Anda sudah memiliki file proyek ini di komputer Anda:
+### Clone dari GitHub
 
 ```bash
-# Buka folder proyek
-cd "path/to/desa-secure-2025"
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Jalankan aplikasi
-streamlit run app.py
-```
-
-### Opsi 2: Clone dari GitHub
-
-Jika repository sudah tersedia di GitHub:
-
-```bash
-# Clone repository (ganti YOUR_USERNAME dengan username GitHub Anda)
-git clone https://github.com/YOUR_USERNAME/desa-secure-2025.git
+git clone https://github.com/Kurnia2810/desa-secure-2025.git
 cd desa-secure-2025
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Jalankan aplikasi
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
-### Virtual Environment (Opsional tapi Direkomendasikan)
+### Atau Langsung (File Sudah Ada)
+
+```bash
+cd "path/to/desa-secure-2025"
+pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+### Virtual Environment (Opsional)
 
 ```bash
 # Windows
@@ -114,94 +100,84 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 
-# Kemudian install dependencies
 pip install -r requirements.txt
 ```
 
-Aplikasi akan otomatis terbuka di browser default Anda pada `http://localhost:8501`
+Aplikasi akan terbuka di browser: `http://localhost:8501`
 
 ---
 
-## 📚 Panduan Penggunaan
+## 📚 Cara Penggunaan
 
-### Penggunaan Dasar
+1. Jalankan: `python -m streamlit run app.py`
+2. Masukkan domain `.desa.id` (contoh: `example.desa.id`)
+3. Klik "🔍 Start Audit"
+4. Analisis hasil audit
+5. Download laporan CSV/TXT
 
-1. **Jalankan Aplikasi**: Eksekusi `streamlit run app.py`
-2. **Masukkan Domain Target**: Input domain `.desa.id` di kolom teks (contoh: `example.desa.id`)
-3. **Mulai Audit**: Klik tombol "🔍 Start Audit"
-4. **Tinjau Hasil**: Analisis skor risiko, temuan, dan laporan terperinci
-5. **Ekspor Laporan**: Unduh laporan CSV atau TXT untuk dokumentasi
-
-### Contoh Domain untuk Diuji
+### Contoh Domain
 - `demo.desa.id`
-- `test.desa.id`
-- Domain `.desa.id` sah yang Anda miliki otorisasi untuk audit
-
-### Memahami Skor Risiko
-
-| Nilai | Rentang Skor | Tingkat Risiko | Deskripsi |
-|-------|--------------|----------------|-----------|
-| **A** | 90-100 | Risiko Rendah | Postur keamanan sangat baik |
-| **B** | 80-89 | Risiko Sedang | Keamanan baik dengan perbaikan minor diperlukan |
-| **C** | 70-79 | Risiko Menengah | Keamanan memadai tapi perlu perhatian |
-| **D** | 60-69 | Risiko Tinggi | Masalah keamanan signifikan ditemukan |
-| **F** | 0-59 | Risiko Kritis | Kerentanan keamanan parah |
-
-### Kriteria Penilaian Risiko
-
-Skor risiko dihitung berdasarkan empat faktor utama:
-
-1. **Sertifikat SSL (30 poin)**
-   - SSL valid dengan 90+ hari: 30 poin
-   - SSL valid dengan 30-90 hari: 20 poin
-   - SSL valid dengan <30 hari: 10 poin
-   - Tidak ada/SSL tidak valid: 0 poin
-
-2. **Kadaluarsa Domain (20 poin)**
-   - Kadaluarsa dalam 365+ hari: 20 poin
-   - Kadaluarsa dalam 90-365 hari: 15 poin
-   - Kadaluarsa dalam 30-90 hari: 10 poin
-   - Kadaluarsa dalam <30 hari: 5 poin
-
-3. **Keamanan Port (25 poin)**
-   - Tidak ada port sensitif terbuka: 25 poin
-   - 1 port sensitif terbuka: 15 poin
-   - 2+ port sensitif terbuka: 5 poin
-
-4. **Header Keamanan (25 poin)**
-   - Berdasarkan persentase implementasi header
-   - Implementasi 80%+: 20+ poin
-   - Implementasi 40-80%: 10-20 poin
-   - Implementasi <40%: 0-10 poin
+- `test.desa.id`  
+- Domain yang Anda miliki izin audit
 
 ---
 
-## 🔍 Fitur Secara Detail
+## 📊 Sistem Penilaian Risiko
 
-### Tab Informasi Domain
-Menampilkan data registrasi domain komprehensif:
+| Nilai | Skor | Tingkat | Deskripsi |
+|-------|------|---------|-----------|
+| **A** | 90-100 | Rendah | Sangat aman |
+| **B** | 80-89 | Sedang | Baik, perlu perbaikan minor |
+| **C** | 70-79 | Menengah | Perlu perhatian |
+| **D** | 60-69 | Tinggi | Masalah signifikan |
+| **F** | 0-59 | Kritis | Kerentanan parah |
+
+### Kriteria Penilaian
+
+**1. Sertifikat SSL (30 poin)**
+- SSL valid 90+ hari: 30 poin
+- SSL valid 30-90 hari: 20 poin
+- SSL valid <30 hari: 10 poin
+- Tidak ada SSL: 0 poin
+
+**2. Kadaluarsa Domain (20 poin)**
+- Kadaluarsa 365+ hari: 20 poin
+- Kadaluarsa 90-365 hari: 15 poin
+- Kadaluarsa 30-90 hari: 10 poin
+- Kadaluarsa <30 hari: 5 poin
+
+**3. Keamanan Port (25 poin)**
+- Tidak ada port sensitif: 25 poin
+- 1 port sensitif: 15 poin
+- 2+ port sensitif: 5 poin
+
+**4. Header Keamanan (25 poin)**
+- Implementasi 80%+: 20+ poin
+- Implementasi 40-80%: 10-20 poin
+- Implementasi <40%: 0-10 poin
+
+---
+
+## 🔍 Detail Fitur
+
+### Tab Domain
 - Nama registrar
-- Tanggal pembuatan domain
-- Tanggal kadaluarsa domain
-- Alamat IP saat ini
-- Name server
+- Tanggal pembuatan dan kadaluarsa
+- Alamat IP
+- Name servers
 
 ### Tab SSL/TLS
-Menganalisis keamanan sertifikat SSL:
-- Status validitas sertifikat
+- Status validitas
 - Hari hingga kadaluarsa
 - Penerbit sertifikat
-- Tanggal kadaluarsa
 
-### Tab Pemindaian Port
-Menampilkan port terbuka dan tingkat risikonya:
-- Port yang diperiksa: 80, 443, 22, 21, 3306, 5432, 8080, 8443
+### Tab Port Scan
+- Port: 80, 443, 22, 21, 3306, 5432, 8080, 8443
 - Identifikasi layanan
-- Klasifikasi risiko untuk setiap port terbuka
-- Peringatan untuk port sensitif (MySQL, PostgreSQL, FTP, SSH)
+- Klasifikasi risiko
+- Alert port sensitif
 
-### Tab Header Keamanan
-Mengevaluasi header keamanan HTTP:
+### Tab Security Headers
 - X-Frame-Options
 - X-Content-Type-Options
 - Strict-Transport-Security (HSTS)
@@ -210,216 +186,177 @@ Mengevaluasi header keamanan HTTP:
 
 ---
 
-## 🎨 Antarmuka Pengguna
-
-Dashboard menampilkan desain modern dan intuitif dengan:
-- **Sidebar**: Informasi proyek, tech stack, dan bagian tentang
-- **Header Utama**: Branding dan judul proyek
-- **Bagian Input**: Kolom entri domain dan tombol trigger audit
-- **Bagian Hasil**: Diatur dalam beberapa tab untuk navigasi mudah
-- **Bagian Ekspor**: Akses cepat untuk mengunduh laporan
-
----
-
 ## 📦 Struktur Proyek
 
 ```
 desa-secure-2025/
-│
-├── app.py                  # Aplikasi Streamlit utama
-├── requirements.txt        # Dependencies Python
-├── README.md              # File ini
-├── .gitignore             # Aturan Git ignore
-└── LICENSE                # Lisensi open source
+├── app.py              # Aplikasi utama
+├── requirements.txt    # Dependencies
+├── README.md          # Dokumentasi
+├── .gitignore         # Git ignore
+└── LICENSE            # Lisensi MIT
 ```
 
 ---
 
-## 🔒 Pertimbangan Keamanan & Hukum
+## 🔒 Keamanan & Hukum
 
-### Disclaimer Penting
+### ⚠️ Disclaimer
 
-⚠️ **Alat ini dirancang khusus untuk tujuan audit keamanan yang diotorisasi.**
+**Tool ini HANYA untuk audit yang diotorisasi.**
 
-- Hanya audit domain yang Anda miliki atau memiliki izin tertulis eksplisit untuk menguji
-- Pemindaian port tanpa otorisasi mungkin ilegal di beberapa yurisdiksi
-- Alat ini untuk tujuan pendidikan dan penelitian
-- Selalu patuhi hukum dan regulasi lokal
-- Developer tidak bertanggung jawab atas penyalahgunaan alat ini
+- Audit hanya domain yang Anda miliki/izinkan
+- Pemindaian tanpa izin mungkin ilegal
+- Untuk pendidikan dan penelitian
+- Patuhi hukum setempat
+- Developer tidak bertanggung jawab atas penyalahgunaan
 
-### Panduan Penggunaan Etis
+### Panduan Etis
 
-1. **Otorisasi**: Selalu dapatkan izin sebelum mengaudit domain apa pun
-2. **Pengungkapan Bertanggung Jawab**: Laporkan temuan kepada pemilik domain secara bertanggung jawab
-3. **Tidak Membahayakan**: Jangan gunakan alat ini untuk merugikan, mengganggu, atau mengeksploitasi sistem
-4. **Tujuan Pendidikan**: Gunakan untuk pembelajaran dan meningkatkan kesadaran keamanan
-5. **Kepatuhan**: Pastikan kepatuhan terhadap undang-undang keamanan siber Indonesia
+1. **Otorisasi** - Dapatkan izin tertulis
+2. **Responsible Disclosure** - Laporkan temuan dengan bijak
+3. **No Harm** - Jangan merusak sistem
+4. **Pendidikan** - Tingkatkan kesadaran keamanan
+5. **Kepatuhan** - Ikuti UU Keamanan Siber Indonesia
 
 ---
 
 ## 🤝 Kontribusi
 
-Kontribusi sangat diterima! Ini adalah proyek open-source yang bertujuan meningkatkan keamanan digital desa di Indonesia.
+Proyek open-source untuk keamanan digital desa Indonesia!
 
-### Cara Berkontribusi
+### Cara Kontribusi
 
 1. Fork repository
-2. Buat branch fitur (`git checkout -b feature/FiturKeren`)
-3. Commit perubahan Anda (`git commit -m 'Menambahkan FiturKeren'`)
-4. Push ke branch (`git push origin feature/FiturKeren`)
-5. Buka Pull Request
+2. Buat branch: `git checkout -b feature/FiturBaru`
+3. Commit: `git commit -m 'Tambah FiturBaru'`
+4. Push: `git push origin feature/FiturBaru`
+5. Buat Pull Request
 
 ### Ide Kontribusi
-
-- Tambahkan pemeriksaan keamanan lebih banyak (misalnya, keamanan DNS, keamanan email)
-- Tingkatkan algoritma penilaian risiko
-- Tambahkan dukungan untuk pemindaian domain batch
-- Implementasi audit terjadwal
-- Tambahkan format ekspor lebih banyak (PDF, JSON)
-- Tingkatkan error handling dan logging
-- Tambahkan dukungan internasionalisasi (i18n)
+- Pemeriksaan DNS security
+- Audit terjadwal
+- Batch scanning
+- Export PDF/JSON
+- Multi-language
+- Machine learning risk prediction
 
 ---
 
-## 🐛 Laporan Bug & Permintaan Fitur
+## 🐛 Bug Report
 
-Silakan gunakan tab GitHub Issues untuk melaporkan bug atau meminta fitur. Saat melaporkan bug, sertakan:
-- Sistem operasi dan versi Python
+Gunakan GitHub Issues dengan info:
+- OS dan versi Python
 - Pesan error lengkap
-- Langkah-langkah untuk mereproduksi masalah
-- Perilaku yang diharapkan vs aktual
+- Langkah reproduksi
+- Expected vs actual behavior
 
 ---
 
 ## 📄 Lisensi
 
-Proyek ini adalah open source dan tersedia di bawah **Lisensi MIT**.
-
-```
-MIT License
+Open source - **MIT License**
 
 Copyright (c) 2025 Desa-Secure 2025 Contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 👨‍💻 Penulis
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+**Proyek:** Desa-Secure 2025  
+**Mata Kuliah:** Audit Teknologi & Sistem Informasi  
+**Semester:** 5 - 2025  
+**Fokus:** Keamanan Digital Desa Indonesia
+
+### Terima Kasih
+- Administrator desa Indonesia
+- Komunitas open-source
+- Penasihat akademik
+- Kontributor proyek
 
 ---
 
-## 👨‍💻 Penulis & Pengakuan
+## 📞 Kontak
 
-**Proyek**: Desa-Secure 2025  
-**Tujuan**: Proyek Akademik - Audit Teknologi & Sistem Informasi  
-**Semester**: 5 - 2025  
-**Fokus**: Keamanan Ekosistem Digital Desa Indonesia
-
-### Terima Kasih Khusus
-
-- Administrator desa Indonesia yang bekerja untuk mendigitalisasi layanan mereka
-- Komunitas open-source untuk tool dan library yang luar biasa
-- Penasihat akademik untuk panduan tentang audit sistem informasi
-- Semua kontributor dan pengguna proyek ini
-
----
-
-## 📞 Kontak & Dukungan
-
-Untuk pertanyaan, dukungan, atau peluang kolaborasi:
-
-- **GitHub**: Buat repository dan update URL di sini
-- **Proyek**: Fokus pada Ekosistem Digital Desa Indonesia
-- **Semester**: 5 - Audit Teknologi & Sistem Informasi
+- **GitHub:** [Kurnia2810/desa-secure-2025](https://github.com/Kurnia2810/desa-secure-2025)
+- **Issues:** [Report Bug](https://github.com/Kurnia2810/desa-secure-2025/issues)
+- **Focus:** Ekosistem Digital Desa Indonesia
 
 ---
 
 ## 🗺️ Roadmap
 
-### Versi 1.0 (Saat Ini)
-- ✅ Audit domain dasar
-- ✅ Pemeriksaan SSL/TLS
-- ✅ Pemindaian port
-- ✅ Analisis header keamanan
-- ✅ Sistem penilaian risiko
-- ✅ Dashboard interaktif
-- ✅ Fungsionalitas ekspor
+### ✅ Versi 1.0 (Current)
+- Audit domain dasar
+- Pemeriksaan SSL/TLS
+- Pemindaian port
+- Analisis header keamanan
+- Sistem penilaian risiko
+- Dashboard interaktif
+- Ekspor CSV/TXT
 
-### Versi 2.0 (Direncanakan)
-- 🔄 Pemindaian domain batch
-- 🔄 Audit terjadwal
-- 🔄 Pelacakan data historis
-- 🔄 Notifikasi email
-- 🔄 API endpoints
-- 🔄 Peningkatan desain responsif mobile
+### 🔄 Versi 2.0 (Planned)
+- Batch domain scanning
+- Scheduled audits
+- Historical tracking
+- Email notifications
+- REST API
+- Mobile responsive
 
-### Versi 3.0 (Masa Depan)
-- 🔮 Prediksi risiko berbasis machine learning
-- 🔮 Integrasi dengan threat intelligence feeds
-- 🔮 Pemindaian kerentanan lanjutan
-- 🔮 Pelaporan kepatuhan (ISO 27001, dll.)
-- 🔮 Dukungan multi-bahasa
+### 🔮 Versi 3.0 (Future)
+- ML-based risk prediction
+- Threat intelligence integration
+- Advanced vulnerability scanning
+- Compliance reporting (ISO 27001)
+- Multi-language support
 
 ---
 
-## 📖 Referensi & Sumber Daya
+## 📖 Referensi
 
-### Ekosistem Digital Desa Indonesia
-- [Sistem Informasi Desa Official](https://sid.kemendesa.go.id/)
+### Ekosistem Desa
+- [Sistem Informasi Desa](https://sid.kemendesa.go.id/)
 - [Kementerian Desa PDTT](https://kemendesa.go.id/)
 
 ### Standar Keamanan
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [CIS Controls](https://www.cisecurity.org/controls)
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [NIST Framework](https://www.nist.gov/cyberframework)
 
-### Dokumentasi Teknis
-- [Dokumentasi Streamlit](https://docs.streamlit.io/)
-- [Python Security Best Practices](https://python.readthedocs.io/en/stable/library/security_warnings.html)
+### Dokumentasi
+- [Streamlit Docs](https://docs.streamlit.io/)
+- [Python Security](https://python.readthedocs.io/en/stable/library/security_warnings.html)
 
 ---
 
 ## 💡 FAQ
 
-**T: Bisakah saya menggunakan tool ini untuk tujuan komersial?**  
-J: Ya, ini adalah software open-source di bawah Lisensi MIT. Namun, selalu pastikan otorisasi yang tepat sebelum audit.
+**Q: Boleh untuk komersial?**  
+A: Ya, MIT License. Tapi pastikan ada izin audit.
 
-**T: Apakah tool ini membuat perubahan pada domain target?**  
-J: Tidak, ini adalah tool reconnaissance pasif yang hanya membaca informasi yang tersedia secara publik.
+**Q: Apakah mengubah target?**  
+A: Tidak, hanya passive reconnaissance.
 
-**T: Apakah data audit saya disimpan di mana pun?**  
-J: Tidak, semua audit dilakukan secara real-time dan tidak ada data yang disimpan di server mana pun.
+**Q: Data disimpan dimana?**  
+A: Tidak disimpan, real-time saja.
 
-**T: Bisakah saya menambahkan lebih banyak port untuk dipindai?**  
-J: Ya! Anda dapat memodifikasi dictionary `ports_to_check` di fungsi `scan_common_ports()`.
+**Q: Tambah port lain?**  
+A: Ya, edit `ports_to_check` di `scan_common_ports()`.
 
-**T: Mengapa hanya mendukung domain .desa.id?**  
-J: Ini by design untuk fokus khusus pada Sistem Informasi Desa Indonesia. Anda dapat memodifikasi fungsi validasi untuk mendukung domain lain.
+**Q: Kenapa hanya .desa.id?**  
+A: Fokus SID Indonesia. Bisa dimodifikasi untuk domain lain.
 
 ---
 
-## 🎓 Penggunaan Pendidikan
+## 🎓 Untuk Pendidikan
 
-Tool ini sempurna untuk:
-- Mata kuliah audit sistem informasi
-- Pelatihan keamanan siber
-- Praktik penetration testing (pada target yang diotorisasi)
-- Memahami teknik OSINT
-- Belajar pemrograman keamanan Python
-- Pengembangan dashboard Streamlit
+Tool ini cocok untuk:
+- Audit sistem informasi
+- Cybersecurity training
+- Penetration testing (authorized)
+- OSINT techniques
+- Python security programming
+- Streamlit development
 
 ---
 
@@ -429,10 +366,6 @@ Tool ini sempurna untuk:
 
 **Desa-Secure 2025** | Membuat Ekosistem Digital Desa Lebih Aman
 
-⭐ Beri bintang repo ini jika Anda merasa berguna!
+⭐ **[Star repo ini](https://github.com/Kurnia2810/desa-secure-2025)** jika berguna!
 
 </div>
-#   d e s a - s e c u r e - 2 0 2 5 
- 
- 
-
